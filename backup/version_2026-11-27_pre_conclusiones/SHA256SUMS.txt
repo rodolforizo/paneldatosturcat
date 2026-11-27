@@ -1,10 +1,3 @@
-
-- Repositorio: rodolforizo/paneldatosturcat
-- Rama: main
-- Commit base/restaurable (estado de la aplicación antes del respaldo): 039eab5aa268188c441a290ad36545f2727b3155
-- El directorio source/ contiene una copia independiente de todos los archivos versionados de ese commit.
-- Para restaurar la aplicación sin incluir el respaldo: volver main al commit indicado y redeplegar en Netlify.
-- El respaldo excluye variables, archivos .env y valores de credenciales/secretos.
 bcf3ea8d1cdbf6521f2417435d7a6c8b9e7f39c1916806c1421c9fb034477d86  source/.gitignore
 8d4427d0ecbcf751978877758de48fbfc8d67dffbfc38fb2923a53abfaf31a21  source/AGENTS.md
 95d3277a22e4de13e9db5fd15ddf0e5bd0f7a6700ed5c5121c0e2fa468865f3c  source/DATA_AUDIT.md
