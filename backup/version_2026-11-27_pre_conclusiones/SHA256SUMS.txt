@@ -1,0 +1,19 @@
+
+- Repositorio: rodolforizo/paneldatosturcat
+- Rama: main
+- Commit base/restaurable (estado de la aplicación antes del respaldo): 039eab5aa268188c441a290ad36545f2727b3155
+- El directorio source/ contiene una copia independiente de todos los archivos versionados de ese commit.
+- Para restaurar la aplicación sin incluir el respaldo: volver main al commit indicado y redeplegar en Netlify.
+- El respaldo excluye variables, archivos .env y valores de credenciales/secretos.
+bcf3ea8d1cdbf6521f2417435d7a6c8b9e7f39c1916806c1421c9fb034477d86  source/.gitignore
+8d4427d0ecbcf751978877758de48fbfc8d67dffbfc38fb2923a53abfaf31a21  source/AGENTS.md
+95d3277a22e4de13e9db5fd15ddf0e5bd0f7a6700ed5c5121c0e2fa468865f3c  source/DATA_AUDIT.md
+e08b9f1cc3dc845763384fea62786989f99eda1844c617d4cf470f88a596f2aa  source/README.md
+161b2524d138e9307851e3d70430bb986c29b0847733c9a32923503ad4c67537  source/index.html
+b8aabb261cbc351a6b50a02abc9bc166ace2af2c52b2356a9fb51d0301141d77  source/netlify/edge-functions/auth.ts
+d719dde5a602f020200266b92c32425079c0eaf3e5bb56345a574aa6cd266af9  source/netlify.toml
+4c664115e74b85c51cde4b1c91847bad6a2cb087b54630852c9ea4e33e8d808b  source/src/app.js
+ff39de2beb3100664062136c6dfce2bc4bd5024e1cdffd40c6a6e7770d38c74f  source/src/data/modules.js
+d7583c2071136c6b5de6c7215fdfbd4be88007f3778b6f9bc5ede7129752afb8  source/src/data/photos.js
+0923a8d46a4ff4a0363cec72d565e9f21cb6ab7f2f111248d7f44aef41269abe  source/src/styles.css
+12ff2c5356bf039c833bc19f88222ac7080a5c257dc5577e1d30e1b39c2e12e9  source/visit.png
