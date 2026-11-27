@@ -4,7 +4,7 @@ Dashboard institucional de ocho módulos, basado en la versión 4 del anuario. E
 
 ## Publicación
 
-El sitio se publica como proyecto Netlify independiente desde la rama `main` del repositorio `rodolforizo/paneldatosturcat`. El enlace de producción del proyecto se mantiene estable entre publicaciones.
+Se prevé publicar el sitio como proyecto Netlify independiente desde la rama `main` del repositorio `rodolforizo/paneldatosturcat`. Una vez activada la integración, el enlace de producción del proyecto se mantendrá estable entre publicaciones.
 
 Antes de publicar, crear en Netlify estas variables privadas con alcance **Functions**:
 
