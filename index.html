@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10263d">
+  <meta name="description" content="Anuario Estadístico de Turismo de Catamarca 2026. Ocho módulos de demanda, oferta y conectividad turística.">
+  <title>Anuario Estadístico de Turismo · Catamarca 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Anuario turístico de Catamarca, inicio">
+      <img src="visit.png" alt="Visit Catamarca">
+      <span class="brand-divider"></span>
+      <span class="brand-text">DIRECCIÓN DE<br>CALIDAD TURÍSTICA</span>
+    </a>
+    <div class="topbar-right"><span class="edition">ANUARIO 2026</span><form action="/logout" method="post"><button class="logout" type="submit">Cerrar sesión</button></form></div>
+  </header>
+  <main id="inicio">
+    <section class="hero" id="hero" aria-labelledby="page-title">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">CATAMARCA · ARGENTINA <span class="eyebrow-line"></span> EDICIÓN PRELIMINAR</p>
+        <h1 id="page-title">Anuario Estadístico<br><span>de Turismo</span></h1>
+        <p class="hero-lead">Ocho perspectivas para leer el turismo provincial: visitantes, capacidad, conectividad y experiencias.</p>
+        <p class="hero-cut">Cortes estadísticos diferenciados · consolidado consultado al 26 de noviembre de 2026</p>
+      </div>
+      <a class="photo-credit hero-credit" id="hero-credit" target="_blank" rel="noopener">Fotografía</a>
+    </section>
+    <section class="overview" aria-label="Navegación por módulos">
+      <div class="section-label"><span>CONTENIDO</span><span>SELECCIONÁ UN MÓDULO</span></div>
+      <nav class="module-nav" id="module-nav"></nav>
+    </section>
+    <section id="module-view" aria-live="polite"></section>
+    <section class="sources-panel">
+      <details>
+        <summary>Fuentes, criterios y licencias fotográficas</summary>
+        <div id="credits-list" class="credits-grid"></div>
+        <p class="source-note">Las fotografías son ilustrativas y no documentan necesariamente el período estadístico. Los datos mantienen la cobertura y las limitaciones declaradas por sus fuentes.</p>
+      </details>
+    </section>
+  </main>
+  <footer class="footer">
+    <img src="visit.png" alt="Visit Catamarca">
+    <p>Dirección de Calidad Turística · Secretaría de Gestión Turística<br>Ministerio de Cultura, Turismo y Deporte</p>
+    <span>CATAMARCA · 2026</span>
+  </footer>
+</body>
+</html>
