@@ -963,26 +963,130 @@ export const modules = [
         ],
         "kind": "bar",
         "unit": "",
-        "caption": "Principales provincias declaradas en formularios I y II; tabla con el detalle completo."
+        "caption": "Principales provincias declaradas en formularios I y II; tabla con el detalle completo.",
+        "tableRows": [
+          [
+            "Provincia",
+            "Encuestas"
+          ],
+          [
+            "Buenos Aires",
+            619
+          ],
+          [
+            "Córdoba",
+            185
+          ],
+          [
+            "Santa Fe",
+            105
+          ],
+          [
+            "Entre Ríos",
+            35
+          ],
+          [
+            "Río Negro",
+            27
+          ],
+          [
+            "Mendoza",
+            23
+          ],
+          [
+            "Ciudad Autónoma de Buenos Aires",
+            20
+          ],
+          [
+            "San Juan",
+            20
+          ],
+          [
+            "Tucumán",
+            19
+          ],
+          [
+            "Santiago del Estero",
+            15
+          ],
+          [
+            "La Rioja",
+            13
+          ],
+          [
+            "Salta",
+            12
+          ],
+          [
+            "La Pampa",
+            9
+          ],
+          [
+            "Chaco",
+            8
+          ],
+          [
+            "Chubut",
+            8
+          ],
+          [
+            "San Luis",
+            8
+          ],
+          [
+            "Catamarca",
+            8
+          ],
+          [
+            "Neuquén",
+            7
+          ],
+          [
+            "Corrientes",
+            7
+          ],
+          [
+            "Misiones",
+            7
+          ],
+          [
+            "Jujuy",
+            4
+          ],
+          [
+            "Formosa",
+            4
+          ],
+          [
+            "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+            2
+          ],
+          [
+            "Santa Cruz",
+            1
+          ]
+        ]
       },
       {
         "t": "Tipo de alojamiento declarado · formularios I y II",
         "l": [
-          "Hotel",
-          "Hotel 1, 2 y 3 estrellas",
-          "Hotel 4 estrellas",
-          "Apart hotel",
-          "Cabañas",
-          "Departamento / alquiler temporario",
-          "Residencial",
-          "Motorhome",
-          "Hostería",
-          "Camping",
-          "Casa de familia",
+          "HOTEL",
+          "HOTEL 1, 2 Y 3 ESTRELLAS",
+          "HOTEL 4 ESTRELLAS",
+          "APART HOTEL",
+          "CABAÑAS",
+          "DEPARTAMENTO/ALQUILER TEMPORARIO",
+          "RESIDENCIAL",
+          "MOTORHOME",
+          "HOSTERIA",
+          "CAMPING",
+          "casa de familia",
           "Casa de familiares",
-          "Casa familiar",
+          "casa familiar",
           "Hostel",
-          "Casa"
+          "Casa de familia",
+          "casa",
+          "CASA FAMILIAR"
         ],
         "v": [
           558,
@@ -995,15 +1099,17 @@ export const modules = [
           27,
           18,
           5,
-          3,
           2,
+          2,
+          1,
+          1,
           1,
           1,
           1
         ],
         "kind": "bar",
         "unit": "",
-        "caption": "Las respuestas se mantienen según la denominación de cada formulario; diferencias de formulario limitan la homologación.",
+        "caption": "Se conservan las denominaciones de los dos formularios; las respuestas con x, vacías o no informadas no se cuentan.",
         "tableRows": [
           [
             "Categoría",
