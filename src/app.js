@@ -37,7 +37,8 @@ const sourceLinks = [
   [{label:'Tablero Yvera de conectividad terrestre',url:'https://tableros.yvera.tur.ar/conectividad_terrestre.html'},{label:'Datos abiertos nacionales',url:'https://www.datos.gob.ar/dataset/turismo-conectividad-terrestre-interurbana'}],
   [{label:'Informe Poncho · repositorio indicado por el usuario'},{label:'Serie diaria recalculada · acceso interno'}],
   [{label:'Base de visitas de Museos de Tinogasta · acceso interno'}],
-  [{label:'Modelo estadístico ADLS 2026 · fuente 73 · acceso interno'},{label:'Consolidado de controles · acceso interno'}]
+  [{label:'Modelo estadístico ADLS 2026 · fuente 73 · acceso interno'},{label:'Consolidado de controles · acceso interno'}],
+  [{label:'Informe Fiesta Nacional e Internacional del Poncho 2026',url:'https://github.com/rodolforizo/informeponcho'}, {label:'Tablero Yvera de conectividad terrestre',url:'https://tableros.yvera.tur.ar/conectividad_terrestre.html'}]
 ];
 
 function kpiMarkup(items, color) {
@@ -49,6 +50,12 @@ function readingMarkup(index) {
   if (index === 1) return `<aside class="reading"><h3>Capacidad y conciliación</h3><p>El resumen por región declara <strong>359 establecimientos, 3.332 habitaciones y 10.385 plazas</strong>. Al sumar las filas individuales marcadas como indicador 1 se obtienen <strong>3.320 habitaciones y 10.359 plazas</strong>. Se muestran los totales declarados y se deja visible la diferencia pendiente de conciliación.</p></aside>`;
   if (index === 5) return `<aside class="reading"><h3>Unidad de conteo</h3><p>La cifra representa <strong>movimientos de circulación durante las jornadas</strong>. Puede incluir entradas reiteradas de una misma persona; no se interpreta como personas únicas ni como turistas alojados.</p></aside>`;
   if (index === 7) return `<aside class="reading"><h3>Control del total</h3><p>La suma de los valores mensuales disponibles para enero–agosto es <strong>1.625</strong>; el total consignado en el modelo fuente es 1.595. Se conserva el recálculo y se informa la diferencia de 30 hasta completar la conciliación.</p></aside>`;
+  if (index === 8) return `
+    <aside class="reading"><h3>Demanda y cautela temporal</h3><p>La serie provincial informa <strong>1.396.464 visitantes en 2024</strong> (valor proyectado), <strong>939.210 en 2025</strong> y <strong>435.893 entre enero y agosto de 2026</strong>. Los períodos y el carácter proyectado/parcial impiden leer la secuencia como una caída o recuperación anual ya confirmada. El cierre 2026 debe actualizarse con el año completo.</p></aside>
+    <aside class="reading"><h3>Oferta y ocupación</h3><p>El padrón declara <strong>359 establecimientos, 3.332 habitaciones y 10.385 plazas</strong>; las filas individuales suman 3.320 habitaciones y 10.359 plazas, mientras la serie provincial informa 10.368 plazas. El <strong>59,4% de ocupación (ene–ago)</strong> no trae denominador ni método de agregación documentado. Para 2027 corresponde conciliar el padrón y publicar fórmula, unidad y período antes de fijar metas.</p></aside>
+    <aside class="reading"><h3>Perfil y conectividad</h3><p>La OIT central reunió <strong>1.222 encuestas válidas al 19/11</strong>; en esa base, 1.125 declararon turismo/recreación (92,1%) y 934 hotel (76,4%). Las proporciones usan la base total de encuestas y no representan porcentajes de visitantes provinciales. En transporte aéreo se registran <strong>31.003 arribos y 31.434 salidas regulares entre enero y octubre</strong>. En el transporte interurbano con cabecera en la capital, septiembre tuvo 18.501 pasajeros frente a 18.003 en 2025 (<strong>+2,8%</strong>). Son indicadores de cobertura distinta: encuestas y pasajeros no equivalen a turistas únicos.</p></aside>
+    <aside class="reading"><h3>Eventos y destinos</h3><p>La Fiesta del Poncho acumuló <strong>1.711.128 movimientos en diez jornadas</strong>, con pico de 223.673 el 25/07; los movimientos pueden incluir reiteraciones. Tinogasta aporta 797 encuestas (marzo–noviembre, con meses parciales). En Antofagasta, enero–agosto suma 1.625 personas en la serie mensual, mientras el modelo consigna 1.595: la diferencia de 30 requiere conciliación.</p></aside>
+    <aside class="reading"><h3>Prioridades de gestión 2027</h3><p><strong>1.</strong> Acordar una ficha técnica común por indicador (fuente, universo, período, unidad, denominador, faltantes y estado preliminar/definitivo). <strong>2.</strong> Cerrar mensualmente el padrón de alojamiento y documentar la fórmula de ocupación. <strong>3.</strong> Integrar llegadas aéreas, transporte terrestre y encuestas sin sumarlos como personas. <strong>4.</strong> Separar circulación de eventos de visitantes únicos y completar controles de destinos. <strong>5.</strong> Fijar metas recién después de contar con líneas de base anuales conciliadas.</p></aside>`;
   return '';
 }
 
@@ -128,14 +135,14 @@ function makeChart(canvas, chart, moduleIndex, chartIndex) {
 function showModule(index, scroll = false) {
   charts.splice(0).forEach(chart => chart.destroy());
   const module = modules[index];
-  const photo = photos[index];
+  const photo = photos[index] ?? photos[0];
   document.querySelectorAll('.nav-item').forEach((button, i) => {
     button.classList.toggle('active', i === index);
     button.setAttribute('aria-pressed', String(i === index));
   });
   view.innerHTML = `
     <section class="module-head ${index === 5 ? 'poncho' : ''}" style="--module-color:${palette[index]};--module-image:url('${photo.src}')">
-      <div class="module-head-content"><span class="module-kicker">MÓDULO ${String(index+1).padStart(2,'0')} / 08</span><h2>${esc(module.title)}</h2><p>${esc(module.sub)}</p></div>
+      <div class="module-head-content"><span class="module-kicker">MÓDULO ${String(index+1).padStart(2,'0')} / ${String(modules.length).padStart(2,'0')}</span><h2>${esc(module.title)}</h2><p>${esc(module.sub)}</p></div>
       <a class="photo-credit" href="${photo.page}" target="_blank" rel="noopener">${esc(photo.author)} · ${esc(photo.license)}</a>
     </section>
     ${kpiMarkup(module.k, palette[index])}

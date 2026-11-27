@@ -1,6 +1,6 @@
 # Anuario Estadístico de Turismo de Catamarca 2026
 
-Dashboard institucional de ocho módulos, basado en la versión 4 del anuario. El proyecto mantiene separados el contenido estadístico (`src/data/modules.js`), las fotografías y sus licencias (`src/data/photos.js`), la presentación (`src/styles.css`), la lógica de gráficos (`src/app.js`) y la autenticación (`netlify/edge-functions/auth.ts`).
+Dashboard institucional de nueve módulos, basado en la versión 4 del anuario. El proyecto mantiene separados el contenido estadístico (`src/data/modules.js`), las fotografías y sus licencias (`src/data/photos.js`), la presentación (`src/styles.css`), la lógica de gráficos (`src/app.js`) y la autenticación (`netlify/edge-functions/auth.ts`).
 
 ## Publicación
 
@@ -29,7 +29,7 @@ Usar credenciales de prueba distintas a las de producción. La Edge Function no 
 ## Revisión funcional
 
 - Iniciar sesión y abrir directamente `/`, `src/data/modules.js`, `src/styles.css` y `visit.png` sin cookie: todas las rutas deben redirigir a `/login`.
-- Ingresar credenciales válidas, navegar por los ocho módulos y verificar gráficos, tablas, textos de cobertura y fotografías.
+- Ingresar credenciales válidas, navegar por los nueve módulos y verificar gráficos, tablas, textos de cobertura y fotografías.
 - Comprobar que cada barra muestre su valor; en gráficos dona, verificar porcentajes internos y la tabla completa.
 - Cerrar sesión y repetir el acceso directo a los recursos.
 - Usar la vista de impresión del navegador para comprobar la salida horizontal y que los gráficos y tablas no se corten.

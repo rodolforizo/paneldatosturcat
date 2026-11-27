@@ -806,5 +806,29 @@ export const modules = [
       }
     ],
     "note": "Fuentes 73 y 75. Enero–agosto 2026: 1.625 turistas recalculados por suma de nacionales y extranjeros; el total publicado en el modelo es 1.595 (diferencia de 30 pendiente de conciliación). La comparación interanual usa solo el mismo período. Septiembre–diciembre no están disponibles; no se imputan ceros."
+  },
+  {
+    "title": "Conclusiones estratégicas 2026 y recomendaciones 2027",
+    "sub": "Síntesis preliminar · hallazgos, límites y prioridades de gestión",
+    "k": [
+      [
+        "Encuestas OIT válidas · al 19/11",
+        1222
+      ],
+      [
+        "Arribos aéreos regulares · ene–oct",
+        31003
+      ],
+      [
+        "Pasajeros interurbanos · septiembre",
+        18501
+      ],
+      [
+        "Movimientos Poncho · 10 jornadas",
+        1711128
+      ]
+    ],
+    "charts": [],
+    "note": "Síntesis elaborada con los indicadores verificados contra el Excel consolidado y sus fuentes originales disponibles al 26/11/2026. El ejercicio 2026 es preliminar: combina cortes y coberturas diferentes; no constituye una estimación anual ni habilita a sumar indicadores de distinta unidad."
   }
 ];

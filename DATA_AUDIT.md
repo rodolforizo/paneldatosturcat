@@ -19,3 +19,14 @@ Los cálculos se contrastaron con el Excel consolidado y las hojas de origen ind
 
 - Conectividad terrestre: [Tablero Yvera](https://tableros.yvera.tur.ar/conectividad_terrestre.html) y [datos.gob.ar](https://www.datos.gob.ar/dataset/turismo-conectividad-terrestre-interurbana).
 - Las hojas de padrón, OIT, Poncho, Tinogasta y Antofagasta de la Sierra permanecen en el espacio de trabajo autorizado. Los identificadores de fuente se mantienen en las planillas de control privadas.
+
+## Conclusiones estratégicas 2026 y recomendaciones 2027
+
+Síntesis preliminar basada en los indicadores de la tabla anterior y las hojas originales del Excel consolidado, con corte al 26/11/2026. No constituye una estimación anual: hay períodos parciales, valores proyectados y diferencias pendientes. Se mantienen separados los conteos de visitantes, encuestas, pasajeros y movimientos.
+
+- Demanda: 1.396.464 visitantes en 2024 (proyectado), 939.210 en 2025 y 435.893 en enero–agosto de 2026; actualizar el cierre antes de interpretar variaciones interanuales.
+- Alojamiento: 359 establecimientos, 3.332 habitaciones y 10.385 plazas declarados; las filas activas suman 3.320 habitaciones y 10.359 plazas, y la serie provincial informa 10.368 plazas. El 59,4% de ocupación enero–agosto no cuenta con denominador/metodología documentados.
+- OIT y transporte: 1.222 encuestas válidas al 19/11; 31.003 arribos y 31.434 salidas aéreas regulares en enero–octubre; 18.501 pasajeros interurbanos en septiembre frente a 18.003 en septiembre de 2025 (+2,8%). Estos universos no son aditivos.
+- Poncho y destinos: 1.711.128 movimientos en diez jornadas, que pueden incluir reiteraciones; Tinogasta contabiliza 797 encuestas; Antofagasta de la Sierra presenta una diferencia de 30 entre suma mensual enero–agosto (1.625) y total del modelo (1.595).
+
+Prioridades 2027: normalizar fichas técnicas y cierres mensuales; conciliar el padrón de alojamiento y documentar la fórmula de ocupación; conectar series de transporte con encuestas sin equiparar pasajeros y turistas; separar circulaciones de personas únicas; y acordar líneas de base anuales antes de establecer metas.

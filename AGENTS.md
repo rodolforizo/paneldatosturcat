@@ -3,8 +3,8 @@
 ## Alcance
 
 - Este repositorio contiene el Anuario Estadístico de Turismo de Catamarca 2026 como sitio independiente.
-- Mantener los ocho módulos del archivo `src/data/modules.js`.
-- No reemplazar la base V4 por una maqueta nueva. Reutilizar su contenido y estructura de indicadores.
+- Mantener nueve módulos en `src/data/modules.js`, incluidos los ocho existentes sin cambios y la síntesis estratégica final.
+- No reemplazar la base V4 por una maqueta nueva. Reutilizar su contenido y estructura de indicadores. Las conclusiones estratégicas deben citar datos fuente, período, unidad y carácter preliminar; no inventar metas ni sumar unidades incompatibles.
 - No modificar ni integrar otros paneles, incluido el panel OIT.
 
 ## Organización
@@ -44,5 +44,5 @@
 ## Publicación y validación
 
 - Publicar desde `main` en el proyecto Netlify independiente asociado a este repositorio.
-- Antes de actualizar producción, revisar la carga de los ocho módulos, el acceso directo bloqueado, inicio/cierre de sesión, gráficos, tablas y enlaces de crédito.
+- Antes de actualizar producción, revisar la carga de los nueve módulos, el acceso directo bloqueado, inicio/cierre de sesión, gráficos, tablas y enlaces de crédito.
 - Usar el mismo enlace de producción para las revisiones sucesivas.
