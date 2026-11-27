@@ -47,8 +47,9 @@ function kpiMarkup(items, color) {
 
 function readingMarkup(index) {
   if (index === 0) return `<aside class="reading"><h3>Cómo leer la ocupación</h3><p><strong>59,4% (enero–agosto 2026)</strong> es el porcentaje informado para el período. La fuente no aclara si el cálculo usa plazas-noches u habitaciones-noches ni cómo agrega los meses. El padrón registra <strong>359 establecimientos, 3.332 habitaciones y 10.385 plazas</strong>; ese inventario mide capacidad física, no el denominador de ocupación. No corresponde multiplicar el 59,4% por las plazas para estimar plazas ocupadas.</p></aside>`;
-  if (index === 1) return `<aside class="reading"><h3>Capacidad y conciliación</h3><p>El resumen por región declara <strong>359 establecimientos, 3.332 habitaciones y 10.385 plazas</strong>. Al sumar las filas individuales marcadas como indicador 1 se obtienen <strong>3.320 habitaciones y 10.359 plazas</strong>. Se muestran los totales declarados y se deja visible la diferencia pendiente de conciliación.</p></aside>`;
-  if (index === 5) return `<aside class="reading"><h3>Unidad de conteo</h3><p>La cifra representa <strong>movimientos de circulación durante las jornadas</strong>. Puede incluir entradas reiteradas de una misma persona; no se interpreta como personas únicas ni como turistas alojados.</p></aside>`;
+  if (index === 1) return `<aside class="reading"><h3>Capacidad, registros y guías</h3><p>El resumen declara <strong>359 alojamientos, 3.332 habitaciones y 10.385 plazas</strong>; las filas activas suman 3.320 habitaciones y 10.359 plazas. La sección de registrados declara 43 alojamientos, 58 agencias, 181 guías de turismo, 11 transportes, 12 prestadores de turismo activo y 23 guías de montaña. Las especialidades de guías proceden de listas candidatas que no permiten confirmar personas únicas ni vigencia; se muestran por separado y no se suman al total declarado.</p></aside>`;
+  if (index === 2) return `<aside class="reading"><h3>Perfil, cobertura y denominadores</h3><p>El tamaño del grupo y los motivos se resumen sobre 1.199 respuestas con dato de los formularios I y II. Las cantidades de mujeres y varones solo están disponibles en el formulario II (501 respuestas válidas) y cuentan declaraciones por grupo, no personas únicas. Los atractivos y destinos son menciones de selección múltiple. La base no incluye una pregunta específica sobre gastronomía; no se infieren preferencias culinarias.</p></aside>`;
+  if (index === 5) return `<aside class="reading"><h3>Unidad de conteo y detalle disponible</h3><p>La cifra representa <strong>movimientos de circulación durante las jornadas</strong>; puede incluir entradas reiteradas de una misma persona. El informe permite consultar circulación diaria y entradas/salidas de pabellones. El cuadro de puestos camineros conserva columnas sin homologar y se excluye hasta su conciliación.</p></aside>`;
   if (index === 7) return `<aside class="reading"><h3>Control del total</h3><p>La suma de los valores mensuales disponibles para enero–agosto es <strong>1.625</strong>; el total consignado en el modelo fuente es 1.595. Se conserva el recálculo y se informa la diferencia de 30 hasta completar la conciliación.</p></aside>`;
   if (index === 8) return `
     <aside class="reading"><h3>Demanda y cautela temporal</h3><p>La serie provincial informa <strong>1.396.464 visitantes en 2024</strong> (valor proyectado), <strong>939.210 en 2025</strong> y <strong>435.893 entre enero y agosto de 2026</strong>. Los períodos y el carácter proyectado/parcial impiden leer la secuencia como una caída o recuperación anual ya confirmada. El cierre 2026 debe actualizarse con el año completo.</p></aside>
@@ -60,6 +61,9 @@ function readingMarkup(index) {
 }
 
 function tableMarkup(chart) {
+  if (Array.isArray(chart.tableRows)) {
+    return `<table class="data-table"><thead><tr>${chart.tableRows[0].map(cell=>`<th>${esc(cell)}</th>`).join('')}</tr></thead><tbody>${chart.tableRows.slice(1).map(row=>`<tr>${row.map((cell,i)=>`<td>${typeof cell === 'number' ? fmt(cell,1) : esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+  }
   const hasSecond = Array.isArray(chart.v2);
   const isDoughnut = chart.kind === 'doughnut';
   const secondName = chart.secondLabel || 'Serie 2';
@@ -74,7 +78,7 @@ function tableMarkup(chart) {
 
 function chartMarkup(chart, index) {
   const caption = chart.caption ? `<p class="chart-caption">${esc(chart.caption)}</p>` : '';
-  return `<section class="chart-card"><h3>${esc(chart.t)}</h3><div class="chart-layout"><div class="chart-wrap"><canvas id="chart-${index}" aria-label="${esc(chart.t)}"></canvas></div>${tableMarkup(chart)}</div>${caption}</section>`;
+  return `<section class="chart-card"><h3>${esc(chart.t)}</h3><div class="chart-layout"><div class="chart-wrap"><canvas id="chart-${index}" aria-label="${esc(chart.t)}"></canvas></div></div><details class="chart-data"><summary>Mostrar tabla de datos</summary><div class="chart-data-table">${tableMarkup(chart)}</div></details>${caption}</section>`;
 }
 
 function makeChart(canvas, chart, moduleIndex, chartIndex) {
